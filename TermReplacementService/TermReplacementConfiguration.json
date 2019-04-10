@@ -1,0 +1,12 @@
+{
+  "ReplaceTermSettings": [
+    {
+      "MultipleOf": 3,
+      "ReplaceWith": "Live"
+    },
+    {
+      "MultipleOf": 5,
+      "ReplaceWith": "Nation"
+    }
+  ]
+}
