@@ -1,7 +1,7 @@
 # TermReplacementService
 **A service that can be configured to replace terms in a sequence of integers with strings**
 
-This is a service written with .NET Core Web API, which provides functionality for replacing integers in a sequence with strings. Strings can be added to the configuration along with a number, multiples of which in a sequence will be replaced with that string.
+This is a service written with .NET Core Web API, which provides functionality for replacing integers in a sequence with strings. Strings can be added to the configuration along with a number, multiples of which in a sequence will be replaced with that string. 
 
 ## Configuration (TermReplacementConfiguration.json)
 
@@ -20,7 +20,7 @@ This is a service written with .NET Core Web API, which provides functionality f
 }
 ```
 
-For instance `{ "MultipleOf": 6, "ReplaceWith":"Hello" }` will, when given a sequence, replace all multiples of 6 with the string "Hello".
+For instance `{ "MultipleOf": 6, "ReplaceWith":"Hello" }` will, when given a sequence, replace all multiples of 6 with the string "Hello". Numbers which are multiples of more than one number defined in the configuration will be replaced with a string which is a concatenation of the configured strings which will be replaced (in the order they appear in the json file). For instance using the above configuration, the number 15 will be replaced with "LiveNation".
 
 ## Building
 To build the code, open the TermReplacementService.sln file in Visual Studio, and build within the IDE. This should also resolve the Nuget packages needed to run the service and associated tests.
