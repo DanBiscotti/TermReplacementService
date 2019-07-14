@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using NSubstitute;
 using TermReplacementService.Code;
 using TermReplacementService.Controllers;
@@ -91,10 +92,7 @@ namespace TermReplacementService.Tests.Controllers
             var termReplacementController = new TermReplacementController(termReplacer, summaryBuilder);
 
             // Act
-            termReplacementController.ReplaceInRange(lowerBound, upperBound);
-
-            // Assert
-            summaryBuilder.Received(1).BuildSummary(mockTermsReplaced, Arg.Any<int[]>());
+            Assert.Throws<ArgumentException>(()=>termReplacementController.ReplaceInRange(lowerBound, upperBound));
         }
 
         private class ReplaceInRange_WhenArgumentsInvalid_TestData : TestData
