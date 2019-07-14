@@ -1,6 +1,8 @@
 # TermReplacementService
 **A service that can be configured to replace terms in a sequence of integers with strings**
 
+[![Build status](https://dev.azure.com/danielscott886/TermReplacementService/_apis/build/status/TermReplacementService-dev-as%20-%20CI)](https://dev.azure.com/danielscott886/TermReplacementService/_build/latest?definitionId=3)
+
 This is a service written with .NET Core Web API, which provides functionality for replacing integers in a sequence with strings. Strings can be added to the configuration along with a number, multiples of which in a sequence will be replaced with that string. 
 
 ## Configuration (TermReplacementConfiguration.json)
